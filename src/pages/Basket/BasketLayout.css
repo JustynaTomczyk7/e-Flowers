@@ -1,0 +1,145 @@
+.container-basket {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.basket-subpage {
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.your-basket {
+    text-align: start;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.added-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0000006b;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.link {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+}
+
+.b-img {
+    width: 70px;
+}
+
+.basket-name {
+    width: 60px;
+    text-align: start;
+}
+
+.b-price {
+    display: none;
+}
+
+.b-quantity {
+    display: flex;
+}
+
+.b-quantity-plus-minus {
+    font-size: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.b-quantity-number {
+    padding: 5px 20px;
+    color: #000;
+    background-color: #bababa80;
+    margin: 0 3px;
+    place-self: center;
+}
+
+.delete {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.basket-total-price {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.total-p {
+    margin-left: 30px;
+}
+
+.basket-btn {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    width: 260px;
+    font-size: 20px;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 5px 50px;
+    color: #000;
+    background-color: #bababa80; 
+}
+
+@media all and (min-width: 450px) {
+    .basket-name {
+        width: 100px;
+    }
+}
+
+@media all and (min-width: 550px) {
+    .basket-name {
+        width: 118px;
+    }
+
+    .b-price {
+        display: block;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .container-basket {
+        padding: 0 50px;
+    }
+
+    .basket-subpage {
+        padding-top: 80px;
+    }
+    
+    .added-product {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    .basket-name {
+        width: 170px;
+    }
+
+    .b-quantity-plus-minus {
+        font-size: 30px;
+    }
+    
+    .b-quantity-number {
+        margin: 0 20px;
+    }
+    
+    .delete {
+        width: 20px;
+        height: 20px;
+        margin-right: 0;
+    }
+}
