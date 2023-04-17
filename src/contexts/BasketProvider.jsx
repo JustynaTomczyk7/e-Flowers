@@ -1,30 +1,36 @@
 import { useState, createContext, useEffect } from "react";
-import { products as productsData } from '../consts/products';
+import { products as productsData } from "../consts/products";
 
 export const BasketContext = createContext();
-  
+
 export function BasketProvider({ children }) {
-  const [products, setProducts] = useState(JSON.parse(localStorage.getItem('products')) || []);
+  const [products, setProducts] = useState(
+    JSON.parse(localStorage.getItem("products")) || []
+  );
 
   useEffect(() => {
-    localStorage.setItem('products', JSON.stringify(products))
-  }, [products])
+    localStorage.setItem("products", JSON.stringify(products));
+  }, [products]);
 
   const addProductToBasket = (productId, count) => {
-    const isProductInProducts = products.find((product) => product.id === productId);
+    const isProductInProducts = products.find(
+      (product) => product.id === productId
+    );
 
     if (isProductInProducts) {
-      setProducts(values => values.map(value => {
-        if (value.id === productId) {
-          return {
-            ...value,
-            count: value.count + count,
+      setProducts((values) =>
+        values.map((value) => {
+          if (value.id === productId) {
+            return {
+              ...value,
+              count: value.count + count,
+            };
           }
-        }
-        return value;
-      }))
+          return value;
+        })
+      );
     } else {
-      const product = productsData.find(product => product.id === productId);
+      const product = productsData.find((product) => product.id === productId);
 
       if (product) {
         setProducts((value) => [
@@ -32,38 +38,42 @@ export function BasketProvider({ children }) {
           {
             ...product,
             count,
-          }
-        ])
+          },
+        ]);
       }
     }
-  }
+  };
 
   const removeProductFromBasket = (productId) => {
     setProducts((values) => values.filter((value) => value.id !== productId));
-  }
+  };
 
   const incrementCount = (productId) => {
-    setProducts(values => values.map(value => {
-      if (value.id === productId) {
-        return {
-          ...value,
-          count: value.count + 1,
+    setProducts((values) =>
+      values.map((value) => {
+        if (value.id === productId) {
+          return {
+            ...value,
+            count: value.count + 1,
+          };
         }
-      }
-      return value;
-    }))
+        return value;
+      })
+    );
   };
 
   const decrementCount = (productId) => {
-    setProducts(values => values.map(value => {
-      if (value.id === productId) {
-        return {
-          ...value,
-          count: value.count === 0 ? 0 : value.count - 1,
+    setProducts((values) =>
+      values.map((value) => {
+        if (value.id === productId) {
+          return {
+            ...value,
+            count: value.count === 0 ? 0 : value.count - 1,
+          };
         }
-      }
-      return value;
-    }))
+        return value;
+      })
+    );
   };
 
   return (
@@ -73,7 +83,7 @@ export function BasketProvider({ children }) {
         addProductToBasket,
         removeProductFromBasket,
         incrementCount,
-        decrementCount
+        decrementCount,
       }}
     >
       {children}

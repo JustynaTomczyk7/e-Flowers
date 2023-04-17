@@ -1,8 +1,5 @@
-import { BasketLayout } from './BasketLayout';
+import { BasketLayout } from "./BasketLayout";
 
 export function Basket() {
-
-    return (
-        <BasketLayout />
-    )
-  }
+  return <BasketLayout />;
+}

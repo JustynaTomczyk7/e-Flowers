@@ -1,131 +1,131 @@
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: auto;
-    padding: 5px 0;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px -5px rgba(117, 117, 117, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  padding: 5px 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px -5px rgba(117, 117, 117, 1);
 }
 
 nav .container {
-    width: 100%;
-    align-items: center;
-    padding: 0 25px;
+  width: 100%;
+  align-items: center;
+  padding: 0 25px;
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: #000;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 10px;
 }
 
 .img-logo {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .text-logo {
-    font-size: 25px;
-    margin: 0;
+  font-size: 25px;
+  margin: 0;
 }
 
 .contact-basket {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contact {
-    text-align: start;
+  text-align: start;
 }
 
 .number {
-    font-size: 18px;
-    margin: 0;
-    white-space: nowrap;
+  font-size: 18px;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .shopping-basket {
-    text-align: start;
-    position: relative;
+  text-align: start;
+  position: relative;
 }
 
 .img-shopping-basket {
-    width: 35px;
-    height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 .shopping-basket > span {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background-color: #cb4782;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #cb4782;
 }
 
 .display-none {
-    display: none;
+  display: none;
 }
 
 @media all and (min-width: 600px) {
-    nav .container {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 50px;
-    }
+  nav .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+  }
 
-    .logo {
-        display: flex;
-        width: 50%;
-        justify-content: inherit;
-        margin-bottom: 0;
-    }
-    
-    .img-logo {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .text-logo {
-        font-size: 30px;
-        margin: 0;
-    }
+  .logo {
+    display: flex;
+    width: 50%;
+    justify-content: inherit;
+    margin-bottom: 0;
+  }
 
-    .contact-basket {
-        display: contents;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .contact {
-        width: 40%;
-        text-align: end;
-    }
-    
-    .number {
-        font-size: 20px;
-    }
-    
-    .shopping-basket {
-        width: 10%;
-        text-align: end;
-    }
+  .img-logo {
+    width: 40px;
+    height: 40px;
+  }
 
-    .shopping-basket > span {
-        left: 75%;
-    }
+  .text-logo {
+    font-size: 30px;
+    margin: 0;
+  }
+
+  .contact-basket {
+    display: contents;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact {
+    width: 40%;
+    text-align: end;
+  }
+
+  .number {
+    font-size: 20px;
+  }
+
+  .shopping-basket {
+    width: 10%;
+    text-align: end;
+  }
+
+  .shopping-basket > span {
+    left: 75%;
+  }
 }
 
 @media all and (min-width: 800px) {
-    .shopping-basket > span {
-        left: 85%;
-    }
+  .shopping-basket > span {
+    left: 85%;
+  }
 }

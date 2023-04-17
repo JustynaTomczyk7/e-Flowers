@@ -1,11 +1,11 @@
-import { Header } from './Header';
-import { Products } from './Products';
+import { Header } from "./Header";
+import { Products } from "./Products";
 
 export function Home() {
-    return (
-      <>
-        <Header />
-        <Products />
-      </>
-    )
-  }
+  return (
+    <>
+      <Header />
+      <Products />
+    </>
+  );
+}
