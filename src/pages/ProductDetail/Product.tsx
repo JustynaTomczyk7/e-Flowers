@@ -3,7 +3,14 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { BasketContext } from "../../contexts/BasketProvider";
 
-export function Product({ id, name, price, img }) {
+type Props = {
+  id: string;
+  name: string;
+  price: number;
+  img: string;
+};
+
+export function Product({ id, name, price, img }: Props) {
   const [count, setCount] = useState(1);
   const { addProductToBasket } = useContext(BasketContext);
 

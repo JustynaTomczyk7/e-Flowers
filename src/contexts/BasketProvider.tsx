@@ -1,18 +1,35 @@
-import { useState, createContext, useEffect } from "react";
+import { useState, createContext, useEffect, PropsWithChildren } from "react";
 import { products as productsData } from "../consts/products";
 
-export const BasketContext = createContext();
+type BasketContextType = {
+  products: Product[];
+  addProductToBasket: (productId: string, count: number) => void;
+  removeProductFromBasket: (productId: string) => void;
+  incrementCount: (productId: string) => void;
+  decrementCount: (productId: string) => void;
+};
 
-export function BasketProvider({ children }) {
-  const [products, setProducts] = useState(
-    JSON.parse(localStorage.getItem("products")) || []
+// @ts-ignore
+export const BasketContext = createContext<BasketContextType>();
+
+type Product = {
+  id: string;
+  img: string;
+  name: string;
+  price: number;
+  count: number;
+};
+
+export function BasketProvider({ children }: PropsWithChildren) {
+  const [products, setProducts] = useState<Product[]>(
+    JSON.parse(localStorage.getItem("products") || "") || []
   );
 
   useEffect(() => {
     localStorage.setItem("products", JSON.stringify(products));
   }, [products]);
 
-  const addProductToBasket = (productId, count) => {
+  const addProductToBasket = (productId: string, count: number) => {
     const isProductInProducts = products.find(
       (product) => product.id === productId
     );
@@ -44,11 +61,11 @@ export function BasketProvider({ children }) {
     }
   };
 
-  const removeProductFromBasket = (productId) => {
+  const removeProductFromBasket = (productId: string) => {
     setProducts((values) => values.filter((value) => value.id !== productId));
   };
 
-  const incrementCount = (productId) => {
+  const incrementCount = (productId: string) => {
     setProducts((values) =>
       values.map((value) => {
         if (value.id === productId) {
@@ -62,7 +79,7 @@ export function BasketProvider({ children }) {
     );
   };
 
-  const decrementCount = (productId) => {
+  const decrementCount = (productId: string) => {
     setProducts((values) =>
       values.map((value) => {
         if (value.id === productId) {
