@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/e-Flowers/static/css/main.e714c8e7.css",
-    "main.js": "/e-Flowers/static/js/main.f3de3180.js",
+    "main.js": "/e-Flowers/static/js/main.a8158b2b.js",
     "static/js/787.af20028f.chunk.js": "/e-Flowers/static/js/787.af20028f.chunk.js",
     "static/media/baner.png": "/e-Flowers/static/media/baner.7815e4e1c30225423d9b.png",
     "static/media/roze-eustomy.jpg": "/e-Flowers/static/media/roze-eustomy.64234c477f15d2acbfd0.jpg",
@@ -15,11 +15,11 @@
     "static/media/logo.svg": "/e-Flowers/static/media/logo.7965917091fdf4b3e41f9a65958a9864.svg",
     "index.html": "/e-Flowers/index.html",
     "main.e714c8e7.css.map": "/e-Flowers/static/css/main.e714c8e7.css.map",
-    "main.f3de3180.js.map": "/e-Flowers/static/js/main.f3de3180.js.map",
+    "main.a8158b2b.js.map": "/e-Flowers/static/js/main.a8158b2b.js.map",
     "787.af20028f.chunk.js.map": "/e-Flowers/static/js/787.af20028f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e714c8e7.css",
-    "static/js/main.f3de3180.js"
+    "static/js/main.a8158b2b.js"
   ]
 }
