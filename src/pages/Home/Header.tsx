@@ -1,6 +1,5 @@
 import "./Header.css";
 import baner from "../../img/baner.png";
-import { Link } from "react-router-dom";
 
 export function Header() {
   return (
