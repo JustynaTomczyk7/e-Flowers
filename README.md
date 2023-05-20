@@ -1,6 +1,6 @@
 # 🌺 e-Flowers
 
-## Demo: https://justynatomczyk7.github.io/e-Flowers
+## Demo: https://justynatomczyk7.github.io/e-Flowers/#/
 
 ## Table of contents
 

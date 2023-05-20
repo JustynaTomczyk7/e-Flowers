@@ -22,7 +22,7 @@ type Product = {
 
 export function BasketProvider({ children }: PropsWithChildren) {
   const [products, setProducts] = useState<Product[]>(
-    JSON.parse(localStorage.getItem("products") || "") || []
+    JSON.parse(localStorage.getItem("products") || "[]") || []
   );
 
   useEffect(() => {
