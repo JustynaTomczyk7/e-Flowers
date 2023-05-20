@@ -1,5 +1,7 @@
 # 🌺 e-Flowers
 
+## Demo: https://justynatomczyk7.github.io/e-Flowers
+
 ## Table of contents
 
 - [General info](#general-info)
