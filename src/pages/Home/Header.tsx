@@ -1,5 +1,6 @@
 import "./Header.css";
 import baner from "../../img/baner.png";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -12,9 +13,16 @@ export function Header() {
             Wyjątkowy!
           </h2>
           <p>Zamów świeże kwiaty z dostawą prosto do domu.</p>
-          <a className="btn-header" href="#products">
+          <button
+            className="btn-header"
+            onClick={() =>
+              document
+                .querySelector("#products")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Sprawdź ofertę
-          </a>
+          </button>
         </div>
       </div>
       <img className="img-header" src={baner} alt="Baner" />

@@ -28,6 +28,10 @@ header {
   padding: 5px 20px;
   color: #000;
   font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
 }
 
 .img-header {
